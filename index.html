@@ -1,89 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming World</title>
 
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background: #12001f;
+            background: linear-gradient(135deg, #080014, #210047, #090018);
             color: white;
         }
 
+        /* HEADER */
         header {
-            background: #250044;
             text-align: center;
-            padding: 30px;
+            padding: 35px 20px;
+            background: linear-gradient(135deg, #16002f, #5b00a8);
+            border-bottom: 3px solid #b84cff;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            margin: auto;
+            border-radius: 50%;
+            background: #080014;
+            border: 4px solid #d56aff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 0 25px #b84cff;
         }
 
         header h1 {
-            font-size: 45px;
-            margin: 0;
+            font-size: 48px;
+            margin-top: 15px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px #d56aff;
         }
 
         header p {
-            font-size: 18px;
+            margin-top: 10px;
+            font-size: 19px;
         }
 
+        /* NAVIGATION */
         nav {
-            background: #09000f;
+            background: #07000d;
             text-align: center;
-            padding: 15px;
+            padding: 18px;
+            position: sticky;
+            top: 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 20px;
+            margin: 0 20px;
             font-weight: bold;
+            font-size: 17px;
         }
 
-        .hero {
+        nav a:hover {
+            color: #d56aff;
+        }
+
+        /* WELCOME */
+        .welcome {
             text-align: center;
-            padding: 70px 20px;
+            padding: 65px 20px;
         }
 
-        .hero h2 {
-            font-size: 35px;
+        .welcome h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
         }
 
-        .hero p {
+        .welcome p {
             font-size: 20px;
         }
 
+        /* GAMES */
         .games {
+            padding: 30px 20px 70px;
             text-align: center;
-            padding: 30px;
         }
 
-        .game-box {
-            display: inline-block;
-            background: #2b0750;
-            width: 200px;
-            margin: 15px;
-            padding: 25px;
-            border-radius: 15px;
+        .games h2 {
+            font-size: 34px;
+            margin-bottom: 35px;
         }
 
-        .game-box h3 {
-            font-size: 24px;
+        .game-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
         }
 
+        .game-card {
+            width: 240px;
+            background: rgba(54, 0, 90, 0.8);
+            border: 2px solid #913cff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 0 18px rgba(160, 70, 255, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* GAME PICTURES */
+        .game-picture {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 75px;
+            background: linear-gradient(135deg, #260052, #7800c8);
+        }
+
+        .freefire {
+            background: linear-gradient(135deg, #4d0800, #ff5a00);
+        }
+
+        .minecraft {
+            background: linear-gradient(135deg, #164d16, #57a83b);
+        }
+
+        .roblox {
+            background: linear-gradient(135deg, #222222, #777777);
+        }
+
+        .fortnite {
+            background: linear-gradient(135deg, #17245c, #00a6d6);
+        }
+
+        .game-card h3 {
+            font-size: 25px;
+            margin: 18px 10px 8px;
+        }
+
+        .game-card p {
+            padding: 0 15px 22px;
+            line-height: 1.5;
+        }
+
+        /* ABOUT */
+        .about {
+            text-align: center;
+            padding: 55px 20px;
+            background: #16002b;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
         footer {
-            background: #09000f;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            background: #050008;
+            padding: 25px;
+            border-top: 2px solid #913cff;
+        }
+
+        footer p {
+            font-size: 18px;
+        }
+
+        .creator {
+            margin-top: 8px;
+            color: #d56aff;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>🎮 GAMING WORLD 🎮</h1>
+    <header id="home">
+
+        <div class="logo">🎮</div>
+
+        <h1>GAMING WORLD</h1>
+
         <p>Welcome to the Ultimate Gaming Website</p>
+
     </header>
 
     <nav>
@@ -92,40 +213,108 @@
         <a href="#about">About</a>
     </nav>
 
-    <section class="hero" id="home">
-        <h2>Welcome Gamers!</h2>
-        <p>Explore the exciting world of video games.</p>
+    <section class="welcome">
+
+        <h2>🎮 Welcome Gamers! 🎮</h2>
+
+        <p>
+            Explore the exciting world of gaming,
+            discover popular games and have fun!
+        </p>
+
     </section>
 
     <section class="games" id="games">
-        <h2>Popular Games</h2>
 
-        <div class="game-box">
-            <h3>Free Fire</h3>
-            <p>Battle, survive and become the last player standing!</p>
+        <h2>🔥 Popular Games 🔥</h2>
+
+        <div class="game-container">
+
+            <div class="game-card">
+
+                <div class="game-picture freefire">
+                    🔥🎯
+                </div>
+
+                <h3>Free Fire</h3>
+
+                <p>
+                    Battle, survive and become the last player standing!
+                </p>
+
+            </div>
+
+
+            <div class="game-card">
+
+                <div class="game-picture minecraft">
+                    ⛏️🧱
+                </div>
+
+                <h3>Minecraft</h3>
+
+                <p>
+                    Build, explore and create your own amazing world.
+                </p>
+
+            </div>
+
+
+            <div class="game-card">
+
+                <div class="game-picture roblox">
+                    🎮👾
+                </div>
+
+                <h3>Roblox</h3>
+
+                <p>
+                    Play exciting games and explore endless adventures.
+                </p>
+
+            </div>
+
+
+            <div class="game-card">
+
+                <div class="game-picture fortnite">
+                    🏆⚡
+                </div>
+
+                <h3>Fortnite</h3>
+
+                <p>
+                    Battle with other players and fight for victory!
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="game-box">
-            <h3>Minecraft</h3>
-            <p>Build, explore and create your own amazing world.</p>
-        </div>
-
-        <div class="game-box">
-            <h3>Roblox</h3>
-            <p>Play exciting games and explore endless adventures.</p>
-        </div>
     </section>
 
-    <section class="hero" id="about">
-        <h2>About Gaming World</h2>
+
+    <section class="about" id="about">
+
+        <h2>⭐ About Gaming World ⭐</h2>
+
         <p>
             Gaming World is a fun website created for gamers.
-            Here you can learn about popular games and gaming adventures.
+            It provides information about popular games and
+            celebrates the exciting world of gaming.
         </p>
+
     </section>
 
+
     <footer>
-        <p>© 2026 Gaming World | Created for School Assignment</p>
+
+        <p>🎮 Gaming World 🎮</p>
+
+        <p class="creator">
+            Created by Muhammad Subhan 6G
+        </p>
+
     </footer>
 
 </body>
