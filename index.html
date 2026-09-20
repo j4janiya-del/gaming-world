@@ -7,154 +7,126 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #111827;
+            background: #12001f;
             color: white;
         }
 
         header {
-            background-color: #7c3aed;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background: #250044;
+            text-align: center;
+            padding: 30px;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
+        header h1 {
+            font-size: 45px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background: #09000f;
+            text-align: center;
+            padding: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 20px;
             font-weight: bold;
         }
 
         .hero {
             text-align: center;
-            padding: 50px 20px;
-            background-color: #1e1b4b;
+            padding: 70px 20px;
         }
 
-        .hero h1 {
-            font-size: 50px;
-            color: #c4b5fd;
+        .hero h2 {
+            font-size: 35px;
         }
 
         .hero p {
             font-size: 20px;
         }
 
-        .content {
-            width: 80%;
-            margin: auto;
+        .games {
             text-align: center;
             padding: 30px;
         }
 
-        .games {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .game {
-            background-color: #1f2937;
-            padding: 15px;
+        .game-box {
+            display: inline-block;
+            background: #2b0750;
+            width: 200px;
+            margin: 15px;
+            padding: 25px;
             border-radius: 15px;
-            width: 250px;
         }
 
-        .game img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .game a {
-            color: #a78bfa;
-            text-decoration: none;
+        .game-box h3 {
+            font-size: 24px;
         }
 
         footer {
+            background: #09000f;
             text-align: center;
-            background-color: #0f172a;
             padding: 20px;
-            margin-top: 30px;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">🎮 Gaming World</div>
+    <header>
+        <h1>🎮 GAMING WORLD 🎮</h1>
+        <p>Welcome to the Ultimate Gaming Website</p>
+    </header>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#games">Games</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
     </nav>
-</header>
 
-<section class="hero" id="home">
-    <h1>🎮 Welcome to Gaming World 🎮</h1>
-    <p>Explore the exciting world of games, fun and adventure!</p>
-</section>
+    <section class="hero" id="home">
+        <h2>Welcome Gamers!</h2>
+        <p>Explore the exciting world of video games.</p>
+    </section>
 
-<section class="content" id="about">
-    <h2>About Gaming</h2>
+    <section class="games" id="games">
+        <h2>Popular Games</h2>
 
-    <p>
-        Gaming is a popular form of entertainment enjoyed by people
-        around the world. There are many types of games, including
-        action, adventure, racing, sports and strategy games.
-    </p>
-</section>
-
-<section class="content" id="games">
-    <h2>⭐ Popular Games</h2>
-
-    <div class="games">
-
-        <div class="game">
-            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
-            <h3>🎯 Action Games</h3>
-            <p>Action games are exciting and full of challenges.</p>
-            <a href="https://www.google.com" target="_blank">Learn More</a>
+        <div class="game-box">
+            <h3>Free Fire</h3>
+            <p>Battle, survive and become the last player standing!</p>
         </div>
 
-        <div class="game">
-            <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8">
-            <h3>🏎️ Racing Games</h3>
-            <p>Racing games let players enjoy fast cars and exciting races.</p>
-            <a href="https://www.google.com" target="_blank">Learn More</a>
+        <div class="game-box">
+            <h3>Minecraft</h3>
+            <p>Build, explore and create your own amazing world.</p>
         </div>
 
-        <div class="game">
-            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
-            <h3>🧱 Adventure Games</h3>
-            <p>Adventure games allow players to explore new worlds.</p>
-            <a href="https://www.google.com" target="_blank">Learn More</a>
+        <div class="game-box">
+            <h3>Roblox</h3>
+            <p>Play exciting games and explore endless adventures.</p>
         </div>
+    </section>
 
-    </div>
-</section>
+    <section class="hero" id="about">
+        <h2>About Gaming World</h2>
+        <p>
+            Gaming World is a fun website created for gamers.
+            Here you can learn about popular games and gaming adventures.
+        </p>
+    </section>
 
-<section class="content" id="contact">
-    <h2>📧 Contact Us</h2>
-    <p>Email: gamingworld@example.com</p>
-</section>
-
-<footer>
-    <p>© 2026 Gaming World</p>
-    <p>Created by: Muhammad Subhan</p>
-    <p>Class: 6G</p>
-</footer>
+    <footer>
+        <p>© 2026 Gaming World | Created for School Assignment</p>
+    </footer>
 
 </body>
 </html>
